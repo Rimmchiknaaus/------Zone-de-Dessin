@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone de Dessin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="toolbar">
+        <h1>Zone de Dessin Interactive</h1>
+        <div class="controls">
+            <button id="clear-btn">Effacer</button>
+            <button id="toggle-coords">Masquer coordonnées</button>
+            <span class="separator">|</span>
+            <label>
+                Couleur: 
+                <input type="color" id="color-picker" value="#ff6b6b">
+            </label>
+            <label>
+                Taille: 
+                <input type="range" id="size-slider" min="1" max="10" value="3">
+                <span id="size-value">3px</span>
+            </label>
+        </div>
+    </div>
+
+    <div id="drawing-area">
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="coord-display">
+            <div class="coord-info">
+                <strong>Client (fenêtre):</strong> 
+                <span id="client-display">X: 0, Y: 0</span>
+            </div>
+            <div class="coord-info">
+                <strong>Page (document):</strong> 
+                <span id="page-display">X: 0, Y: 0</span>
+            </div>
+            <div class="coord-info">
+                <strong>Canvas (relatif):</strong> 
+                <span id="canvas-display">X: 0, Y: 0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
